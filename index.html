@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  SITIO DE DEMOSTRACIÓN — Mel do Cordal es una explotación
+  apícola FICTICIA. Nombre, dirección, teléfonos, colmenares,
+  cosechas, precios y opiniones son de muestra y no
+  corresponden a ningún apicultor real.
+  No se inventa ningún número de registro sanitario ni se
+  reclama la IGP «Mel de Galicia»: el aviso legal explica cuál
+  es el dato que iría en ese hueco.
+  No se atribuye a la miel ninguna propiedad medicinal.
+  ============================================================
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mel do Cordal · Apicultura en Mazaricos</title>
+<meta name="description" content="Cuatro colmenares en Mazaricos y cuatro mieles distintas, según lo que florece en tres kilómetros a la redonda. Sitio de demostración: negocio ficticio.">
+<meta name="theme-color" content="#f2eee3">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mel do Cordal · Apicultura en Mazaricos">
+<meta property="og:description" content="La miel no la hacemos nosotros: la hace lo que florece en tres kilómetros a la redonda. Explotación ficticia de demostración.">
+<meta property="og:image" content="assets/og.png">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..800;1,400..700&family=Karla:ital,wght@0,300..700;1,300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Mel do Cordal",
+  "description": "Explotación apícola con cuatro colmenares y venta directa. Negocio ficticio de demostración.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rúa do Campo da Feira, 12",
+    "postalCode": "15256",
+    "addressLocality": "Mazaricos",
+    "addressRegion": "A Coruña",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34 981 00 00 72",
+  "email": "mel@meldocordal.example",
+  "priceRange": "6,50 € – 19 €",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "16:30", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "10:00", "closes": "14:00" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__caja">
+    <svg class="preloader__marca" viewBox="0 0 120 120" role="presentation" focusable="false">
+      <circle class="preloader__aro" cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="2" pathLength="1"></circle>
+      <circle class="preloader__aro preloader__aro--2" cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1.6" pathLength="1"></circle>
+      <circle class="preloader__aro preloader__aro--3" cx="60" cy="60" r="16" fill="none" stroke="currentColor" stroke-width="1.2" pathLength="1"></circle>
+      <rect class="preloader__caja-abejas" x="52" y="52" width="16" height="16" rx="2"></rect>
+    </svg>
+    <span class="preloader__palabra">tres quilómetros</span>
+  </div>
+</div>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="cabecera" id="cabecera">
+  <a class="marca" href="#inicio" aria-label="Mel do Cordal, inicio">
+    <svg class="marca__icono" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+      <circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+      <circle cx="20" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="1.3"></circle>
+      <rect x="15" y="15" width="10" height="10" rx="1.5" fill="currentColor"></rect>
+    </svg>
+    <span class="marca__texto">
+      <span class="marca__nombre">Mel do Cordal</span>
+      <span class="marca__bajada">apicultura · Mazaricos</span>
+    </span>
+  </a>
+
+  <nav class="nav" id="nav" aria-label="Navegación principal">
+    <ul class="nav__lista">
+      <li><a href="#colmenares">Los colmenares</a></li>
+      <li><a href="#ano">El año</a></li>
+      <li><a href="#alimento">La miel</a></li>
+      <li><a href="#tarros">Los tarros</a></li>
+      <li><a href="#visitas">Visitas</a></li>
+    </ul>
+    <a class="boton boton--monte magnetico" href="#donde">Dónde comprarla</a>
+  </nav>
+
+  <button class="hamburguesa" id="hamburguesa" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir el menú">
+    <span class="hamburguesa__caja" aria-hidden="true"><i></i><i></i></span>
+    <span class="hamburguesa__texto">Menú</span>
+  </button>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ 01 · HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero__texto">
+      <p class="hero__sobre">Mazaricos, A Coruña · 140 colmenas · desde 2009</p>
+      <h1 class="hero__titular" data-reveal>La miel no la hacemos nosotros</h1>
+      <p class="hero__entrada">La hace lo que florece en los tres kilómetros que hay alrededor de cada colmenar. Ese es el radio en el que una abeja trabaja bien. Cambia el sitio y cambia la miel: por eso aquí hay cuatro colmenares y cuatro mieles, y ninguna se mezcla con otra.</p>
+      <div class="hero__acciones">
+        <a class="boton boton--monte magnetico" href="#colmenares">Ver los cuatro radios</a>
+        <a class="boton boton--linea magnetico" href="#tarros">Tarros y precios</a>
+      </div>
+      <dl class="hero__datos">
+        <div><dt>Radio de vuelo</dt><dd><span class="contador" data-hasta="3">3</span> km</dd></div>
+        <div><dt>Colmenas</dt><dd><span class="contador" data-hasta="140">140</span></dd></div>
+        <div><dt>Mieles distintas</dt><dd><span class="contador" data-hasta="4">4</span></dd></div>
+      </dl>
+    </div>
+
+    <figure class="hero__radio">
+      <svg class="radio radio--hero" viewBox="0 0 220 220" role="img" aria-label="Diagrama de los tres anillos de un kilómetro alrededor de una colmena">
+        <circle class="radio__anillo" cx="110" cy="110" r="100" pathLength="1"></circle>
+        <circle class="radio__anillo radio__anillo--2" cx="110" cy="110" r="67" pathLength="1"></circle>
+        <circle class="radio__anillo radio__anillo--3" cx="110" cy="110" r="34" pathLength="1"></circle>
+        <line class="radio__regla" x1="110" y1="110" x2="210" y2="110"></line>
+        <text class="radio__cota" x="146" y="103">3 km</text>
+        <g class="radio__colmena">
+          <rect x="99" y="98" width="22" height="20" rx="2"></rect>
+          <rect x="96" y="118" width="28" height="4" rx="1.5"></rect>
+          <line x1="99" y1="105" x2="121" y2="105"></line>
+          <line x1="99" y1="111" x2="121" y2="111"></line>
+        </g>
+      </svg>
+      <figcaption>Una abeja pecorea bien hasta unos tres kilómetros. Más lejos, gasta más de lo que trae.</figcaption>
+    </figure>
+  </section>
+
+  <div class="cinta" aria-hidden="true">
+    <div class="cinta__pista" id="cintaPista">
+      <span>cuatro colmenares</span><i>·</i><span>cosecha por floración</span><i>·</i>
+      <span>sin mezclar</span><i>·</i><span>decantada, no pasteurizada</span><i>·</i>
+      <span>si cristaliza, es buena señal</span><i>·</i>
+    </div>
+  </div>
+
+  <!-- ============ 02 · LOS CUATRO COLMENARES (protagonista) ============ -->
+  <section class="colmenares seccion" id="colmenares">
+    <p class="seccion__indice"><span>01</span> Los colmenares</p>
+    <h2 class="titular titular--grande" data-reveal>Cuatro radios de tres kilómetros</h2>
+    <p class="colmenares__entrada">Los cuatro están a menos de veinte minutos de casa, y aun así no se parecen en nada. Estos son sus mapas: el anillo exterior es el límite de tres kilómetros, y dentro va dibujado lo que hay. La miel de abajo es la que sale de ahí.</p>
+
+    <svg class="defs" aria-hidden="true" focusable="false" width="0" height="0">
+      <defs>
+        <g id="m-brezo">
+          <path d="M0 4 v-5" stroke="currentColor" stroke-width="1"></path>
+          <circle cx="0" cy="-6" r="2.1" fill="currentColor"></circle>
+          <circle cx="-3" cy="-3" r="1.6" fill="currentColor"></circle>
+          <circle cx="3" cy="-3" r="1.6" fill="currentColor"></circle>
+        </g>
+        <g id="m-arbol">
+          <path d="M0 5 v-4" stroke="currentColor" stroke-width="1.1"></path>
+          <path d="M0-9 c4 2 5 6 0 10 c-5-4-4-8 0-10Z" fill="currentColor"></path>
+        </g>
+        <g id="m-toxo">
+          <path d="M0 4 v-8 M0-2 l-3.4-2.6 M0-2 l3.4-2.6 M0-5 l-3-2.2 M0-5 l3-2.2" stroke="currentColor" stroke-width="1"></path>
+        </g>
+        <g id="m-hierba">
+          <path d="M0 4 c-4-3-4-7-3-9 M0 4 c0-4 0-7 0-9 M0 4 c4-3 4-7 3-9" stroke="currentColor" stroke-width=".9" fill="none"></path>
+        </g>
+      </defs>
+    </svg>
+
+    <ul class="lamina" id="lamina">
+
+      <li class="colmenar" style="--miel:#4a2a14">
+        <figure class="colmenar__mapa">
+          <svg class="radio" viewBox="0 0 200 200" role="img" aria-label="Mapa del colmenar de Brañas de Xuño: brañas encharcadas, un regato y bosque bajo dentro del radio de tres kilómetros">
+            <circle class="radio__anillo" cx="100" cy="100" r="92" pathLength="1"></circle>
+            <circle class="radio__anillo radio__anillo--2" cx="100" cy="100" r="61" pathLength="1"></circle>
+            <circle class="radio__anillo radio__anillo--3" cx="100" cy="100" r="31" pathLength="1"></circle>
+            <g class="radio__terreno">
+              <path d="M18 128c26-6 40 8 64 4s38-16 62-10 34 14 38 12" fill="none"></path>
+              <path d="M22 146c30-4 44 10 68 6s40-14 62-8" fill="none"></path>
+              <path d="M52 62c14-10 34-6 44 4s26 10 40 2" fill="none"></path>
+              <ellipse class="radio__agua" cx="72" cy="140" rx="22" ry="9"></ellipse>
+              <ellipse class="radio__agua" cx="128" cy="152" rx="14" ry="6"></ellipse>
+            </g>
+            <g class="radio__flora">
+              <use href="#m-brezo" x="66" y="126"></use>
+              <use href="#m-brezo" x="88" y="150"></use>
+              <use href="#m-brezo" x="116" y="132"></use>
+              <use href="#m-hierba" x="46" y="112"></use>
+              <use href="#m-hierba" x="142" y="140"></use>
+              <use href="#m-arbol" x="62" y="66"></use>
+              <use href="#m-arbol" x="126" y="58"></use>
+              <use href="#m-arbol" x="150" y="86"></use>
+            </g>
+            <g class="radio__colmena">
+              <rect x="91" y="92" width="18" height="16" rx="2"></rect>
+              <rect x="88" y="108" width="24" height="3.4" rx="1.4"></rect>
+              <line x1="91" y1="97" x2="109" y2="97"></line>
+              <line x1="91" y1="102" x2="109" y2="102"></line>
+            </g>
+          </svg>
+          <figcaption>Brañas de Xuño · 40 colmenas · 120 m</figcaption>
+        </figure>
+
+        <div class="colmenar__ficha">
+          <h3>Brañas de Xuño</h3>
+          <p class="colmenar__flora">Brezo de turbera, salgueiro, ameneiro y el zarzal de las lindes.</p>
+          <div class="colmenar__miel">
+            <svg class="tarro" viewBox="0 0 70 100" role="img" aria-labelledby="tarro1">
+              <title id="tarro1">Tarro con miel de color caoba muy oscuro</title>
+              <clipPath id="clip1"><path d="M13 32h44v50a8 8 0 0 1-8 8H21a8 8 0 0 1-8-8Z"></path></clipPath>
+              <rect class="tarro__miel" x="13" y="32" width="44" height="58" clip-path="url(#clip1)"></rect>
+              <path class="tarro__vidrio" d="M13 32h44v50a8 8 0 0 1-8 8H21a8 8 0 0 1-8-8Z"></path>
+              <rect class="tarro__tapa" x="16" y="16" width="38" height="14" rx="3"></rect>
+            </svg>
+            <dl>
+              <div><dt>Miel</dt><dd>De brañas</dd></div>
+              <div><dt>Color</dt><dd>Caoba muy oscuro</dd></div>
+              <div><dt>Sabor</dt><dd>Denso, de regaliz y madera mojada</dd></div>
+              <div><dt>Cosecha</dt><dd>Finales de septiembre</dd></div>
+            </dl>
+          </div>
+        </div>
+      </li>
+
+      <li class="colmenar" style="--miel:#7a3418">
+        <figure class="colmenar__mapa">
+          <svg class="radio" viewBox="0 0 200 200" role="img" aria-label="Mapa del colmenar del Alto do Cordal: curvas de nivel de una loma a 480 metros, con brezo y toxo dentro del radio de tres kilómetros">
+            <circle class="radio__anillo" cx="100" cy="100" r="92" pathLength="1"></circle>
+            <circle class="radio__anillo radio__anillo--2" cx="100" cy="100" r="61" pathLength="1"></circle>
+            <circle class="radio__anillo radio__anillo--3" cx="100" cy="100" r="31" pathLength="1"></circle>
+            <g class="radio__terreno">
+              <path d="M30 118c18-34 44-52 74-50s50 22 62 48" fill="none"></path>
+              <path d="M44 126c16-28 38-42 62-40s42 18 52 40" fill="none"></path>
+              <path d="M58 134c14-22 30-32 48-31s34 14 42 31" fill="none"></path>
+              <path d="M74 142c10-14 20-20 32-19s24 8 30 19" fill="none"></path>
+              <path d="M16 166h168" fill="none" stroke-dasharray="3 5"></path>
+            </g>
+            <g class="radio__flora">
+              <use href="#m-brezo" x="56" y="104"></use>
+              <use href="#m-brezo" x="80" y="88"></use>
+              <use href="#m-brezo" x="122" y="86"></use>
+              <use href="#m-brezo" x="146" y="106"></use>
+              <use href="#m-toxo" x="44" y="132"></use>
+              <use href="#m-toxo" x="70" y="146"></use>
+              <use href="#m-toxo" x="134" y="148"></use>
+              <use href="#m-toxo" x="158" y="132"></use>
+            </g>
+            <g class="radio__colmena">
+              <rect x="91" y="92" width="18" height="16" rx="2"></rect>
+              <rect x="88" y="108" width="24" height="3.4" rx="1.4"></rect>
+              <line x1="91" y1="97" x2="109" y2="97"></line>
+              <line x1="91" y1="102" x2="109" y2="102"></line>
+            </g>
+          </svg>
+          <figcaption>Alto do Cordal · 30 colmenas · 480 m</figcaption>
+        </figure>
+
+        <div class="colmenar__ficha">
+          <h3>Alto do Cordal</h3>
+          <p class="colmenar__flora">Brezo de monte y toxo hasta donde alcanza la vista. Nada más, y no hace falta.</p>
+          <div class="colmenar__miel">
+            <svg class="tarro" viewBox="0 0 70 100" role="img" aria-labelledby="tarro2">
+              <title id="tarro2">Tarro con miel de color rojizo oscuro</title>
+              <clipPath id="clip2"><path d="M13 32h44v50a8 8 0 0 1-8 8H21a8 8 0 0 1-8-8Z"></path></clipPath>
+              <rect class="tarro__miel" x="13" y="32" width="44" height="58" clip-path="url(#clip2)"></rect>
+              <path class="tarro__vidrio" d="M13 32h44v50a8 8 0 0 1-8 8H21a8 8 0 0 1-8-8Z"></path>
+              <rect class="tarro__tapa" x="16" y="16" width="38" height="14" rx="3"></rect>
+            </svg>
+            <dl>
+              <div><dt>Miel</dt><dd>De brezo</dd></div>
+              <div><dt>Color</dt><dd>Rojizo oscuro</dd></div>
+              <div><dt>Sabor</dt><dd>Amargo al final, muy persistente</dd></div>
+              <div><dt>Cosecha</dt><dd>Octubre, la última del año</dd></div>
+            </dl>
+          </div>
+        </div>
+      </li>
+
+      <li class="colmenar" style="--miel:#9a5a1c">
+        <figure class="colmenar__mapa">
+          <svg class="radio" viewBox="0 0 200 200" role="img" aria-label="Mapa del colmenar del Souto de Bealo: un souto de castaños en un valle, con carballos, dentro del radio de tres kilómetros">
+            <circle class="radio__anillo" cx="100" cy="100" r="92" pathLength="1"></circle>
+            <circle class="radio__anillo radio__anillo--2" cx="100" cy="100" r="61" pathLength="1"></circle>
+            <circle class="radio__anillo radio__anillo--3" cx="100" cy="100" r="31" pathLength="1"></circle>
+            <g class="radio__terreno">
+              <path d="M22 84c24 16 34 40 34 62M178 84c-24 16-34 40-34 62" fill="none"></path>
+              <path d="M100 30v140" fill="none" stroke-dasharray="4 6"></path>
+            </g>
+            <g class="radio__flora">
+              <use href="#m-arbol" x="48" y="72"></use>
+              <use href="#m-arbol" x="70" y="60"></use>
+              <use href="#m-arbol" x="62" y="96"></use>
+              <use href="#m-arbol" x="44" y="118"></use>
+              <use href="#m-arbol" x="130" y="60"></use>
+              <use href="#m-arbol" x="152" y="74"></use>
+              <use href="#m-arbol" x="138" y="96"></use>
+              <use href="#m-arbol" x="156" y="120"></use>
+              <use href="#m-hierba" x="92" y="150"></use>
+              <use href="#m-hierba" x="112" y="156"></use>
+            </g>
+            <g class="radio__colmena">
+              <rect x="91" y="92" width="18" height="16" rx="2"></rect>
+              <rect x="88" y="108" width="24" height="3.4" rx="1.4"></rect>
+              <line x1="91" y1="97" x2="109" y2="97"></line>
+              <line x1="91" y1="102" x2="109" y2="102"></line>
+            </g>
+          </svg>
+          <figcaption>Souto de Bealo · 45 colmenas · 210 m</figcaption>
+        </figure>
+
+        <div class="colmenar__ficha">
+          <h3>Souto de Bealo</h3>
+          <p class="colmenar__flora">Castaños viejos a los dos lados del valle, carballos y silvas en el fondo.</p>
+          <div class="colmenar__miel">
+            <svg class="tarro" viewBox="0 0 70 100" role="img" aria-labelledby="tarro3">
+              <title id="tarro3">Tarro con miel de color ámbar tostado</title>
+              <clipPath id="clip3"><path d="M13 32h44v50a8 8 0 0 1-8 8H21a8 8 0 0 1-8-8Z"></path></clipPath>
+              <rect class="tarro__miel" x="13" y="32" width="44" height="58" clip-path="url(#clip3)"></rect>
+              <path class="tarro__vidrio" d="M13 32h44v50a8 8 0 0 1-8 8H21a8 8 0 0 1-8-8Z"></path>
+              <rect class="tarro__tapa" x="16" y="16" width="38" height="14" rx="3"></rect>
+            </svg>
+            <dl>
+              <div><dt>Miel</dt><dd>De castaño</dd></div>
+              <div><dt>Color</dt><dd>Ámbar tostado</dd></div>
+              <div><dt>Sabor</dt><dd>Fuerte, con un amargor limpio</dd></div>
+              <div><dt>Cosecha</dt><dd>Primeros de agosto</dd></div>
+            </dl>
+          </div>
+        </div>
+      </li>
+
+      <li class="colmenar" style="--miel:#cb9a34">
+        <figure class="colmenar__mapa">
+          <svg class="radio" viewBox="0 0 200 200" role="img" aria-label="Mapa del colmenar de Ribeira do Xallas: el río cruzando el radio, con eucaliptos en hileras y prados de trébol">
+            <circle class="radio__anillo" cx="100" cy="100" r="92" pathLength="1"></circle>
+            <circle class="radio__anillo radio__anillo--2" cx="100" cy="100" r="61" pathLength="1"></circle>
+            <circle class="radio__anillo radio__anillo--3" cx="100" cy="100" r="31" pathLength="1"></circle>
+            <g class="radio__terreno">
+              <path class="radio__rio" d="M12 74c30 10 44 30 76 34s52 22 100 28" fill="none"></path>
+              <path d="M30 40h4M42 36h4M54 32h4M66 30h4M140 156h4M152 160h4M164 162h4" fill="none"></path>
+            </g>
+            <g class="radio__flora">
+              <use href="#m-arbol" x="40" y="48"></use>
+              <use href="#m-arbol" x="58" y="42"></use>
+              <use href="#m-arbol" x="76" y="40"></use>
+              <use href="#m-arbol" x="94" y="42"></use>
+              <use href="#m-arbol" x="140" y="62"></use>
+              <use href="#m-arbol" x="156" y="76"></use>
+              <use href="#m-hierba" x="52" y="142"></use>
+              <use href="#m-hierba" x="76" y="152"></use>
+              <use href="#m-hierba" x="104" y="158"></use>
+              <use href="#m-hierba" x="128" y="148"></use>
+            </g>
+            <g class="radio__colmena">
+              <rect x="91" y="92" width="18" height="16" rx="2"></rect>
+              <rect x="88" y="108" width="24" height="3.4" rx="1.4"></rect>
+              <line x1="91" y1="97" x2="109" y2="97"></line>
+              <line x1="91" y1="102" x2="109" y2="102"></line>
+            </g>
+          </svg>
+          <figcaption>Ribeira do Xallas · 25 colmenas · 60 m</figcaption>
+        </figure>
+
+        <div class="colmenar__ficha">
+          <h3>Ribeira do Xallas</h3>
+          <p class="colmenar__flora">Eucalipto en las laderas, trébol y silva en los prados de la orilla.</p>
+          <div class="colmenar__miel">
+            <svg class="tarro" viewBox="0 0 70 100" role="img" aria-labelledby="tarro4">
+              <title id="tarro4">Tarro con miel de color dorado claro</title>
+              <clipPath id="clip4"><path d="M13 32h44v50a8 8 0 0 1-8 8H21a8 8 0 0 1-8-8Z"></path></clipPath>
+              <rect class="tarro__miel" x="13" y="32" width="44" height="58" clip-path="url(#clip4)"></rect>
+              <path class="tarro__vidrio" d="M13 32h44v50a8 8 0 0 1-8 8H21a8 8 0 0 1-8-8Z"></path>
+              <rect class="tarro__tapa" x="16" y="16" width="38" height="14" rx="3"></rect>
+            </svg>
+            <dl>
+              <div><dt>Miel</dt><dd>De eucalipto</dd></div>
+              <div><dt>Color</dt><dd>Dorado claro</dd></div>
+              <div><dt>Sabor</dt><dd>Suave, con un fondo de madera</dd></div>
+              <div><dt>Cosecha</dt><dd>Mediados de julio</dd></div>
+            </dl>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <p class="colmenares__nota">Los kilos varían mucho de un año a otro: si en agosto llueve tres semanas seguidas, la del brezo no sale. Cuando se acaba una, se acaba hasta el año siguiente; no se compra miel de nadie para rellenar el hueco.</p>
+  </section>
+
+  <!-- ============ 03 · EL AÑO ============ -->
+  <section class="ano" id="ano">
+    <div class="seccion">
+      <p class="seccion__indice"><span>02</span> El año</p>
+      <h2 class="titular" data-reveal>Lo que florece y cuándo</h2>
+      <p class="ano__entrada">Este calendario es el que manda: dice cuándo hay que subir las alzas, cuándo se cosecha y cuándo no se toca nada. Las tres marcas de abajo son las tres cosechas del año.</p>
+
+      <p class="ahora" id="ahora"><span class="ahora__punto" aria-hidden="true"></span><span id="ahoraTexto">Comprobando qué florece…</span></p>
+
+      <div class="grafico" role="img" aria-labelledby="graficoTitulo" aria-describedby="graficoTexto">
+        <p id="graficoTitulo" class="visualmente-oculto">Calendario de floración y de cosechas</p>
+        <div class="grafico__meses" aria-hidden="true">
+          <span>E</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span>
+          <span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span>
+        </div>
+        <ul class="grafico__filas">
+          <li><b>Salgueiro</b><span class="barra" style="--desde:2; --hasta:4" data-barra></span></li>
+          <li><b>Toxo</b><span class="barra" style="--desde:2; --hasta:5" data-barra></span></li>
+          <li><b>Eucalipto</b><span class="barra" style="--desde:5; --hasta:8" data-barra></span></li>
+          <li><b>Castaño</b><span class="barra" style="--desde:6; --hasta:8" data-barra></span></li>
+          <li><b>Silva</b><span class="barra" style="--desde:6; --hasta:9" data-barra></span></li>
+          <li><b>Trébol</b><span class="barra" style="--desde:5; --hasta:10" data-barra></span></li>
+          <li><b>Brezo</b><span class="barra" style="--desde:8; --hasta:11" data-barra></span></li>
+        </ul>
+        <div class="grafico__marcas" aria-hidden="true">
+          <span class="marca-cosecha" style="--mes:7">Eucalipto</span>
+          <span class="marca-cosecha" style="--mes:8">Castaño</span>
+          <span class="marca-cosecha" style="--mes:10">Brezo y brañas</span>
+        </div>
+      </div>
+      <p id="graficoTexto" class="grafico__texto">En texto: el salgueiro florece de febrero a marzo y el toxo de febrero a abril, y de ahí sale el polen con el que las colmenas arrancan. El eucalipto va de mayo a julio; el castaño, junio y julio; la silva, de junio a agosto; el trébol, de mayo a septiembre; el brezo, de agosto a octubre. Se cosecha tres veces: eucalipto a mediados de julio, castaño a primeros de agosto, y brezo y brañas en octubre.</p>
+
+      <ul class="ano__tareas">
+        <li><b>Febrero a abril</b><span>Trampeo de avispa velutina. Se ponen las trampas de reinas fundadoras; es la única época en que sirven de algo.</span></li>
+        <li><b>Mayo</b><span>Control de enjambrazón, alzas puestas y núcleos nuevos para reponer las colmenas que no pasaron el invierno.</span></li>
+        <li><b>Agosto y diciembre</b><span>Tratamiento contra varroa, con producto autorizado y anotado en el cuaderno de explotación.</span></li>
+        <li><b>Noviembre a enero</b><span>No se abre una colmena. Se pesan por fuera y se les deja la miel que necesitan para el invierno.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 04 · LA MIEL ES UN ALIMENTO ============ -->
+  <section class="alimento seccion" id="alimento">
+    <p class="seccion__indice"><span>03</span> La miel</p>
+    <div class="alimento__rejilla">
+      <div>
+        <h2 class="titular" data-reveal>La miel es un alimento, no un remedio</h2>
+        <p class="alimento__fuerte">Aquí no vas a leer que la miel cura la tos, que refuerza nada ni que sustituye a ningún medicamento. Ni lo decimos ni lo podemos decir: atribuir propiedades curativas a un alimento está prohibido, y además no sería verdad. Lo que sí podemos contar es cómo se trata.</p>
+        <ul class="alimento__lista">
+          <li><b>Decantada, no pasteurizada</b><span>Se deja reposar en maduradores y se envasa. No pasa por calor alto, así que no se le va el aroma.</span></li>
+          <li><b>Filtrada gruesa</b><span>Solo se le quita la cera y algún resto de la extracción. El resto se queda.</span></li>
+          <li><b>Que cristalice es normal</b><span>Casi todas las mieles cristalizan con el tiempo; que una no lo haga nunca es más raro que lo contrario. Si la quieres líquida otra vez, el tarro al baño maría por debajo de 40 °C.</span></li>
+          <li><b>Se guarda seca y a oscuras</b><span>En un armario, con la tapa bien puesta y lejos del fuego. En la nevera no: coge humedad y se pone dura.</span></li>
+          <li><b>No se la des a menores de doce meses</b><span>Es la recomendación de las autoridades sanitarias para cualquier miel, por el riesgo de botulismo infantil. Viene escrita en la etiqueta.</span></li>
+        </ul>
+      </div>
+      <figure class="alimento__foto" data-mascara data-cursor="Foto de archivo">
+        <img src="assets/fotos/panal-1600.jpg" srcset="assets/fotos/panal-800.jpg 800w, assets/fotos/panal-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 42vw" width="1600" height="1067" loading="lazy" alt="Cuadro de panal lleno de abejas, sostenido por un apicultor">
+        <figcaption>Foto de archivo.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 05 · LOS TARROS ============ -->
+  <section class="tarros seccion" id="tarros">
+    <p class="seccion__indice"><span>04</span> Los tarros</p>
+    <div class="tarros__rejilla">
+      <div>
+        <h2 class="titular" data-reveal>Lo que hay este año, con su precio</h2>
+        <table class="tabla">
+          <caption class="visualmente-oculto">Tarros a la venta y precios</caption>
+          <thead><tr><th scope="col">Producto</th><th scope="col">Formato</th><th scope="col">Precio</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Miel de eucalipto</th><td>500 g</td><td>11,00 €</td></tr>
+            <tr><th scope="row">Miel de eucalipto</th><td>1 kg</td><td>19,00 €</td></tr>
+            <tr><th scope="row">Miel de castaño</th><td>500 g</td><td>12,50 €</td></tr>
+            <tr><th scope="row">Miel de brezo</th><td>500 g</td><td>14,00 €</td></tr>
+            <tr><th scope="row">Miel de brañas</th><td>250 g</td><td>7,50 €</td></tr>
+            <tr><th scope="row">Cera en velas</th><td>2 unidades</td><td>8,00 €</td></tr>
+            <tr><th scope="row">Polen</th><td>125 g</td><td>7,50 €</td></tr>
+          </tbody>
+        </table>
+        <p class="tarros__nota">Precios de muestra para esta demostración. La de brezo se acaba casi siempre en noviembre. El polen se recoge en primavera y se guarda congelado; se entrega en bolsa cerrada y se conserva en el congelador de casa.</p>
+      </div>
+      <figure class="tarros__foto" data-mascara data-cursor="Foto de archivo">
+        <img src="assets/fotos/brezo-1600.jpg" srcset="assets/fotos/brezo-800.jpg 800w, assets/fotos/brezo-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 40vw" width="1600" height="1067" loading="lazy" alt="Ladera cubierta de brezo en flor con monte al fondo">
+        <figcaption>Foto de archivo: brezo en flor, que es de donde sale la miel más oscura.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 06 · VISITAS ============ -->
+  <section class="visitas" id="visitas">
+    <div class="seccion">
+      <p class="seccion__indice"><span>05</span> Visitas</p>
+      <div class="visitas__rejilla">
+        <div>
+          <h2 class="titular" data-reveal>Abrir una colmena con la cara a medio metro</h2>
+          <p>De abril a septiembre se pueden visitar dos de los cuatro colmenares. Son dos horas: se va andando hasta las colmenas, se abre una, se explica qué se está viendo y se vuelve. No es un espectáculo, es un día de trabajo con gente mirando.</p>
+          <dl class="visitas__datos">
+            <div><dt>Duración</dt><dd>2 horas</dd></div>
+            <div><dt>Grupo</dt><dd>Máximo 6 personas</dd></div>
+            <div><dt>Precio</dt><dd>18 € por persona</dd></div>
+            <div><dt>Temporada</dt><dd>De abril a septiembre</dd></div>
+          </dl>
+          <div class="visitas__aviso">
+            <h3>Antes de reservar</h3>
+            <ul>
+              <li>El traje y la careta los ponemos nosotros, y son obligatorios.</li>
+              <li><strong>Si eres alérgico a la picadura de abeja o de avispa, dilo al reservar.</strong> No es una visita para ti, y preferimos decírtelo antes que llevarte al monte.</li>
+              <li>A partir de ocho años, y siempre con un adulto.</li>
+              <li>Si llueve o hace viento fuerte, no se abre ninguna colmena: se cambia la fecha.</li>
+            </ul>
+          </div>
+        </div>
+        <figure class="visitas__foto" data-mascara data-cursor="Foto de archivo">
+          <img src="assets/fotos/apicultor-1600.jpg" srcset="assets/fotos/apicultor-800.jpg 800w, assets/fotos/apicultor-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 36vw" width="1600" height="2400" loading="lazy" alt="Persona con traje blanco de apicultor y careta puesta">
+          <figcaption>Foto de archivo.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 07 · DÓNDE ============ -->
+  <section class="donde seccion" id="donde">
+    <p class="seccion__indice"><span>06</span> Dónde</p>
+    <div class="donde__rejilla">
+      <div class="donde__texto">
+        <h2 class="titular" data-reveal>Se vende aquí y en el mercado</h2>
+        <p>Llevan las colmenas <strong>Xoán Ferreiro Lamas</strong>, que empezó con seis en 2009, y <strong>Sabela Ferreiro</strong>, que se ocupa del envasado y de las visitas. No hay tienda en línea: la miel pesa mucho y el porte se come el precio.</p>
+
+        <p class="estado" id="estado"><span class="estado__punto" aria-hidden="true"></span><span id="estadoTexto">Comprobando el horario…</span></p>
+
+        <table class="horario">
+          <caption class="visualmente-oculto">Cuándo se puede comprar en la casa</caption>
+          <tbody id="horarioCuerpo">
+            <tr><th scope="row">Lunes</th><td>Cerrado</td></tr>
+            <tr><th scope="row">Martes</th><td>En el mercado de Santa Comba, de 9:00 a 13:30</td></tr>
+            <tr><th scope="row">Miércoles</th><td>Cerrado</td></tr>
+            <tr><th scope="row">Jueves</th><td>Cerrado</td></tr>
+            <tr><th scope="row">Viernes</th><td>En la casa, de 16:30 a 20:00</td></tr>
+            <tr><th scope="row">Sábado</th><td>En la casa, de 10:00 a 14:00</td></tr>
+            <tr><th scope="row">Domingo</th><td>Cerrado</td></tr>
+          </tbody>
+        </table>
+
+        <ul class="donde__datos">
+          <li><span>Teléfono</span><a href="tel:+34981000072">981 00 00 72</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/34600000072" rel="noopener">600 00 00 72</a></li>
+          <li><span>Correo</span><a href="mailto:mel@meldocordal.example">mel@meldocordal.example</a></li>
+          <li><span>Dónde</span>Rúa do Campo da Feira, 12 · 15256 Mazaricos (A Coruña)</li>
+          <li><span>Registros</span>Explotación de muestra, sin número de registro sanitario ni IGP</li>
+        </ul>
+
+        <div class="voces">
+          <h3>Del cuaderno de la casa</h3>
+          <p class="voces__aviso">Notas de muestra, escritas para esta demostración. No proceden de ninguna plataforma ni de ningún cliente real.</p>
+          <blockquote><p>«Le pedí la de brezo en diciembre y me dijo que se había acabado en noviembre, que volviera en octubre. Me pareció una respuesta rarísima hasta que entendí por qué.»</p><footer>Un cliente del mercado</footer></blockquote>
+          <blockquote><p>«Fuimos a la visita con dos críos de diez años. Abrió una colmena delante de ellos y no se movieron en veinte minutos.»</p><footer>Familia de Santa Comba</footer></blockquote>
+        </div>
+      </div>
+
+      <div class="donde__lado">
+        <div class="donde__mapa">
+          <div class="mapa-consent" id="mapaConsent">
+            <svg class="mapa-consent__dibujo" viewBox="0 0 300 170" aria-hidden="true" focusable="false">
+              <circle cx="150" cy="86" r="66" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".35"></circle>
+              <circle cx="150" cy="86" r="44" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".28"></circle>
+              <circle cx="150" cy="86" r="22" fill="none" stroke="currentColor" stroke-width="1" opacity=".22"></circle>
+              <path d="M0 120c50-8 68-26 118-26s74 22 120 16" fill="none" stroke="currentColor" stroke-width="1.3" opacity=".45"></path>
+              <rect x="143" y="79" width="14" height="13" rx="1.6" fill="currentColor"></rect>
+            </svg>
+            <p>El mapa lo carga Google y pone cookies suyas. Solo aparece si lo pides tú.</p>
+            <button class="boton boton--linea" type="button" id="mapaBoton">Cargar el mapa de Google</button>
+          </div>
+        </div>
+        <div class="donde__tiendas">
+          <h3>También está en</h3>
+          <ul>
+            <li>Ultramarinos Cerqueiro · Santa Comba</li>
+            <li>Panadería do Cruceiro · Mazaricos</li>
+            <li>A Despensa · Negreira</li>
+            <li>Mercado de abastos · Muros, los puestos 7 y 8</li>
+          </ul>
+          <p>Cuatro tiendas más de la comarca. Si en alguna se acabó, en la casa suele quedar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie" id="pie">
+  <div class="pie__rejilla">
+    <div class="pie__marca">
+      <svg class="marca__icono" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+        <circle cx="20" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="1.3"></circle>
+        <rect x="15" y="15" width="10" height="10" rx="1.5" fill="currentColor"></rect>
+      </svg>
+      <p class="pie__nombre">Mel do Cordal</p>
+      <p class="pie__lema">Cuatro colmenares en Mazaricos y cuatro mieles, desde 2009.</p>
+    </div>
+    <div class="pie__bloque">
+      <h2>Dónde</h2>
+      <p>Rúa do Campo da Feira, 12<br>15256 Mazaricos · A Coruña</p>
+      <p><a href="tel:+34981000072">981 00 00 72</a><br><a href="mailto:mel@meldocordal.example">mel@meldocordal.example</a></p>
+    </div>
+    <div class="pie__bloque">
+      <h2>Venta</h2>
+      <p>Viernes de 16:30 a 20:00<br>Sábado de 10:00 a 14:00<br>Martes en el mercado de Santa Comba</p>
+    </div>
+    <div class="pie__bloque">
+      <h2>Legal</h2>
+      <ul>
+        <li><a href="aviso-legal.html">Aviso legal</a></li>
+        <li><a href="privacidad.html">Privacidad y cookies</a></li>
+        <li><a href="#inicio">Volver arriba</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="pie__demo"><strong>Sitio de demostración.</strong> Mel do Cordal es una explotación ficticia; los colmenares, las cosechas, los precios, las fotografías y las opiniones son de muestra. No se publica ningún número de registro sanitario ni se reclama la IGP «Mel de Galicia», y no se atribuye a la miel ninguna propiedad medicinal.</p>
+  <p class="pie__creditos">Fotografías de archivo con licencia Pexels, acreditadas en <code>CREDITOS.md</code>. Los cuatro mapas de radio, los tarros, el calendario, el logotipo y la 404 están dibujados para esta plantilla.</p>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" hidden role="dialog" aria-labelledby="cookieTitulo" aria-describedby="cookieTexto">
+  <div class="cookie-banner__texto">
+    <h2 id="cookieTitulo">Sobre las cookies</h2>
+    <p id="cookieTexto">Esta web no usa cookies de seguimiento ni analítica. Solo guardamos en tu navegador que ya has visto este aviso. El mapa de Google únicamente se carga si pulsas el botón.</p>
+  </div>
+  <div class="cookie-banner__acciones">
+    <a class="cookie-banner__mas" href="privacidad.html">Más detalle</a>
+    <button class="boton boton--monte" type="button" id="cookieAceptar">Entendido</button>
+  </div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true">
+  <span class="cursor__forma"></span>
+  <span class="cursor__texto" id="cursorTexto"></span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

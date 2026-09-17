@@ -1,0 +1,13 @@
+{
+  "name": "Mel do Cordal · apicultura (demostración)",
+  "short_name": "Mel do Cordal",
+  "description": "Plantilla de demostración para una explotación apícola. Negocio ficticio.",
+  "lang": "es",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f2eee3",
+  "theme_color": "#f2eee3",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
