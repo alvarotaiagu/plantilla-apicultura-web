@@ -52,21 +52,40 @@
     else if (destino && destino.scrollIntoView) destino.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
   }
 
-  /* ---------- 2 · preloader: los tres anillos se dibujan ---------- */
+  /* ---------- 2 · cortina de entrada ----------
+     Gesto propio del concepto: los tres anillos se dibujan de dentro afuera,
+     la colmena se planta en el centro, el anillo exterior se abre hasta
+     salirse de la pantalla y la cortina sube detrás con el borde de abajo
+     curvado en un arco hondo, que es el mismo arco del radio.
+     Retirada garantizada: sin GSAP y con movimiento reducido se quita de
+     inmediato, y aun con GSAP hay una red de seguridad a los 4,2 s. */
   var preloader = document.getElementById('preloader');
-  function cerrarPreloader() {
+  var animHero = [];                                  // el hero arranca cuando sube la cortina
+  function arrancarHero() { animHero.splice(0).forEach(function (f) { f(); }); }
+
+  function quitarPreloader() {
     if (!preloader) return;
-    preloader.classList.add('fuera');
-    setTimeout(function () { preloader.style.display = 'none'; }, 800);
+    preloader.style.display = 'none';
+    arrancarHero();
   }
   if (!movimiento) {
-    if (preloader) preloader.style.display = 'none';
+    quitarPreloader();
   } else {
-    var tl = gsap.timeline({ onComplete: cerrarPreloader });
-    tl.to('.preloader__aro', { strokeDashoffset: 0, duration: 1.1, ease: 'power2.inOut', stagger: .18 })
-      .to('.preloader__caja-abejas', { scale: 1, duration: .5, ease: 'back.out(2)' }, '-=.5')
-      .to('.preloader__caja', { opacity: 0, duration: .4, delay: .3 });
-    setTimeout(cerrarPreloader, 4200);
+    var tl = gsap.timeline();
+    // Ojo: nada de tuitear `scale` con GSAP sobre elementos SVG de esta
+    // cortina. GSAP mide el transformOrigin sobre el bbox y se lleva la pieza
+    // fuera del lienzo; los dos gestos van en CSS y aquí solo se pone la clase.
+    tl.to('.preloader__aro', { strokeDashoffset: 0, duration: 1.1, ease: 'power2.inOut', stagger: .18 }, 0)
+      .call(function () { preloader.classList.add('plantada'); }, null, .95)
+      .call(function () { preloader.classList.add('abriendo'); }, null, 1.5)
+      .to('.preloader__palabra', { opacity: 0, y: -14, duration: .5, ease: 'power2.in' }, 1.6)
+      .to(preloader, { '--curva-cortina': 1, duration: .55, ease: 'power2.inOut' }, 1.85)
+      .to(preloader, {
+        yPercent: -102, duration: 1.3, ease: 'expo.inOut',
+        onComplete: quitarPreloader
+      }, 2.1)
+      .add(arrancarHero, 2.4);
+    setTimeout(quitarPreloader, 4600);   // red de seguridad
   }
 
   /* ---------- 3 · aviso de cookies ---------- */
@@ -141,11 +160,13 @@
   if (movimiento) {
     document.querySelectorAll('[data-reveal]').forEach(function (el, idx) {
       var letras = partir(el);
-      gsap.to(letras, {
-        y: 0, duration: .9, ease: 'power3.out', stagger: .016,
-        scrollTrigger: { trigger: el, start: 'top 88%', once: true },
-        delay: idx === 0 ? 1.7 : 0
-      });
+      // El titular del hero no lleva retardo fijo: lo arranca la cortina.
+      var lanzar = function () {
+        var conf = { y: 0, duration: .9, ease: 'power3.out', stagger: .016 };
+        if (idx !== 0) conf.scrollTrigger = { trigger: el, start: 'top 88%', once: true };
+        gsap.to(letras, conf);
+      };
+      if (idx === 0) animHero.push(lanzar); else lanzar();
     });
   }
 
@@ -155,9 +176,11 @@
     if (!movimiento || isNaN(hasta)) return;
     var obj = { v: 0 };
     el.textContent = '0';
-    gsap.to(obj, {
-      v: hasta, duration: 1.6, ease: 'power2.out', delay: 1.9,
-      onUpdate: function () { el.textContent = Math.round(obj.v); }
+    animHero.push(function () {
+      gsap.to(obj, {
+        v: hasta, duration: 1.6, ease: 'power2.out',
+        onUpdate: function () { el.textContent = Math.round(obj.v); }
+      });
     });
   });
 

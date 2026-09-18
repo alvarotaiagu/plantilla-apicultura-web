@@ -1,0 +1,28 @@
+{
+  "errores": [
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED"
+  ],
+  "fallos": [
+    "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js :: net::ERR_FAILED",
+    "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js :: net::ERR_FAILED",
+    "https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js :: net::ERR_FAILED"
+  ],
+  "pruebas": {
+    "ahora": "Ahora, en septiembre, están en flor el trébol y el brezo.",
+    "estado": "Hoy en la casa, de 16:30 a 20:00",
+    "colmenares": "4 colmenares · mieles rgb(74, 42, 20) rgb(122, 52, 24) rgb(154, 90, 28) rgb(203, 154, 52)",
+    "floraYanillos": "36 marcadores · 15 anillos",
+    "barras": "2-4 2-5 5-8 6-8 6-9 5-10 8-11",
+    "tarrosLlenos": "visible:true · miel:matrix(1, 0, 0, 1, 0, 0) · anillo:0px · flora opacidad:1  →  visible:true · miel:matrix(1, 0, 0, 1, 0, 0) · anillo:0px · flora opacidad:1",
+    "calendario": "visible:true · barra brezo:matrix(1, 0, 0, 1, 0, 0)  →  visible:true · barra brezo:matrix(1, 0, 0, 1, 0, 0)",
+    "cookiesVisible": true,
+    "cookiesCerrado": true,
+    "mapaIframe": 1,
+    "menu": "true -> false",
+    "sinGsap": "has-motion:false · titular:La miel no la hacemos noso · flora opacidad:1 · miel transform:none · barra:none · foto clip:inset(0px) · contador:3 · ahora:Ahora, en septiembre, están en flor el t",
+    "reduce": "has-motion:true · grafico visible:true · barra:matrix(1, 0, 0, 1, 0, 0) · miel:matrix(1, 0, 0, 1, 0, 0) · flora:1 · anillo:0px"
+  },
+  "longtask": ""
+}

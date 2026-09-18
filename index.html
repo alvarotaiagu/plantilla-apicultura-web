@@ -154,6 +154,7 @@
 
     <svg class="defs" aria-hidden="true" focusable="false" width="0" height="0">
       <defs>
+        <clipPath id="dentro-del-radio"><circle cx="100" cy="100" r="91"></circle></clipPath>
         <g id="m-brezo">
           <path d="M0 4 v-5" stroke="currentColor" stroke-width="1"></path>
           <circle cx="0" cy="-6" r="2.1" fill="currentColor"></circle>
@@ -181,14 +182,14 @@
             <circle class="radio__anillo" cx="100" cy="100" r="92" pathLength="1"></circle>
             <circle class="radio__anillo radio__anillo--2" cx="100" cy="100" r="61" pathLength="1"></circle>
             <circle class="radio__anillo radio__anillo--3" cx="100" cy="100" r="31" pathLength="1"></circle>
-            <g class="radio__terreno">
+            <g class="radio__terreno" clip-path="url(#dentro-del-radio)">
               <path d="M18 128c26-6 40 8 64 4s38-16 62-10 34 14 38 12" fill="none"></path>
               <path d="M22 146c30-4 44 10 68 6s40-14 62-8" fill="none"></path>
               <path d="M52 62c14-10 34-6 44 4s26 10 40 2" fill="none"></path>
               <ellipse class="radio__agua" cx="72" cy="140" rx="22" ry="9"></ellipse>
               <ellipse class="radio__agua" cx="128" cy="152" rx="14" ry="6"></ellipse>
             </g>
-            <g class="radio__flora">
+            <g class="radio__flora" clip-path="url(#dentro-del-radio)">
               <use href="#m-brezo" x="66" y="126"></use>
               <use href="#m-brezo" x="88" y="150"></use>
               <use href="#m-brezo" x="116" y="132"></use>
@@ -235,14 +236,14 @@
             <circle class="radio__anillo" cx="100" cy="100" r="92" pathLength="1"></circle>
             <circle class="radio__anillo radio__anillo--2" cx="100" cy="100" r="61" pathLength="1"></circle>
             <circle class="radio__anillo radio__anillo--3" cx="100" cy="100" r="31" pathLength="1"></circle>
-            <g class="radio__terreno">
+            <g class="radio__terreno" clip-path="url(#dentro-del-radio)">
               <path d="M30 118c18-34 44-52 74-50s50 22 62 48" fill="none"></path>
               <path d="M44 126c16-28 38-42 62-40s42 18 52 40" fill="none"></path>
               <path d="M58 134c14-22 30-32 48-31s34 14 42 31" fill="none"></path>
               <path d="M74 142c10-14 20-20 32-19s24 8 30 19" fill="none"></path>
               <path d="M16 166h168" fill="none" stroke-dasharray="3 5"></path>
             </g>
-            <g class="radio__flora">
+            <g class="radio__flora" clip-path="url(#dentro-del-radio)">
               <use href="#m-brezo" x="56" y="104"></use>
               <use href="#m-brezo" x="80" y="88"></use>
               <use href="#m-brezo" x="122" y="86"></use>
@@ -289,11 +290,11 @@
             <circle class="radio__anillo" cx="100" cy="100" r="92" pathLength="1"></circle>
             <circle class="radio__anillo radio__anillo--2" cx="100" cy="100" r="61" pathLength="1"></circle>
             <circle class="radio__anillo radio__anillo--3" cx="100" cy="100" r="31" pathLength="1"></circle>
-            <g class="radio__terreno">
+            <g class="radio__terreno" clip-path="url(#dentro-del-radio)">
               <path d="M22 84c24 16 34 40 34 62M178 84c-24 16-34 40-34 62" fill="none"></path>
               <path d="M100 30v140" fill="none" stroke-dasharray="4 6"></path>
             </g>
-            <g class="radio__flora">
+            <g class="radio__flora" clip-path="url(#dentro-del-radio)">
               <use href="#m-arbol" x="48" y="72"></use>
               <use href="#m-arbol" x="70" y="60"></use>
               <use href="#m-arbol" x="62" y="96"></use>
@@ -342,11 +343,11 @@
             <circle class="radio__anillo" cx="100" cy="100" r="92" pathLength="1"></circle>
             <circle class="radio__anillo radio__anillo--2" cx="100" cy="100" r="61" pathLength="1"></circle>
             <circle class="radio__anillo radio__anillo--3" cx="100" cy="100" r="31" pathLength="1"></circle>
-            <g class="radio__terreno">
+            <g class="radio__terreno" clip-path="url(#dentro-del-radio)">
               <path class="radio__rio" d="M12 74c30 10 44 30 76 34s52 22 100 28" fill="none"></path>
               <path d="M30 40h4M42 36h4M54 32h4M66 30h4M140 156h4M152 160h4M164 162h4" fill="none"></path>
             </g>
-            <g class="radio__flora">
+            <g class="radio__flora" clip-path="url(#dentro-del-radio)">
               <use href="#m-arbol" x="40" y="48"></use>
               <use href="#m-arbol" x="58" y="42"></use>
               <use href="#m-arbol" x="76" y="40"></use>

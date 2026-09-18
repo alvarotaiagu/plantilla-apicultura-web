@@ -79,23 +79,43 @@ a { color: inherit; }
 }
 .saltar:focus { top: 1rem; }
 
-/* ====================== preloader ====================== */
+/* ====================== cortina de entrada ====================== */
+@property --curva-cortina {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
 .preloader {
   position: fixed; inset: 0; z-index: 400;
-  background: var(--fondo);
+  background: var(--tinta);
   display: grid; place-items: center;
-  transition: opacity .7s var(--curva), visibility .7s;
+  overflow: hidden;
+  transform-origin: 50% 0%;
+  /* arco hondo: el borde de abajo es un trozo del anillo de tres kilómetros */
+  border-bottom-left-radius: 56% calc(var(--curva-cortina, 0) * 20vh);
+  border-bottom-right-radius: 56% calc(var(--curva-cortina, 0) * 20vh);
 }
-.preloader.fuera { opacity: 0; visibility: hidden; }
-.preloader__caja { text-align: center; color: var(--monte); }
+/* Retirada garantizada: sin GSAP o con movimiento reducido el JS le pone
+   display:none en cuanto arranca. Esta clase es solo el plan B. */
+.preloader.fuera { opacity: 0; visibility: hidden; transition: opacity .5s var(--curva), visibility .5s; }
+.preloader__caja { text-align: center; color: var(--monte-claro); }  /* 6,53 sobre --tinta */
 .preloader__marca { width: 104px; height: 104px; }
 .preloader__aro { stroke-dasharray: 1; stroke-dashoffset: 1; }
-.preloader__caja-abejas { fill: var(--ambar); transform: scale(0); transform-origin: 60px 60px; }
+.preloader__caja-abejas {
+  fill: var(--ambar-claro);            /* 6,12 sobre --tinta */
+  transform: scale(0); transform-origin: 60px 60px;
+  transition: transform .55s cubic-bezier(.34, 1.56, .64, 1);
+}
+.preloader.plantada .preloader__caja-abejas { transform: scale(1); }
+/* El radio se abre hasta salirse: el origen de un <svg> en CSS se resuelve
+   contra su viewBox, que es justo lo que GSAP no hace. */
+.preloader__marca { transition: transform 1.15s cubic-bezier(.7, 0, .84, 0), opacity 1.15s ease-in; }
+.preloader.abriendo .preloader__marca { transform: scale(7); opacity: 0; }
 .preloader__palabra {
   display: block; margin-top: .9rem;
   font-family: var(--titulo); font-size: 1.15rem;
   letter-spacing: .26em; text-transform: uppercase;
-  color: var(--tinta-media);
+  color: var(--crema-suave);           /* 8,51 sobre --tinta */
 }
 html:not(.has-motion) .preloader { display: none; }
 
